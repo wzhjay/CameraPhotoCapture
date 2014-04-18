@@ -1,0 +1,389 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".CameraPhotoCapture"
+    android:background="@drawable/image3" 
+    android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+
+	<RelativeLayout
+	        android:layout_width="fill_parent"
+  		    android:layout_height="fill_parent"
+    >
+    <!--android:background="#FF9C12"-->
+
+    	<Button android:text="  Add New Temple  "
+        	android:textColor="#33B5E5"
+            android:id="@+id/photo"
+        	android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+    
+   	    <TextView
+        android:id="@+id/message1"
+        android:layout_below="@+id/photo"
+        android:text="Click on button to capture image"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        
+        />
+       
+        <Button android:text="  Local Database  "
+        	android:textColor="#33B5E5"
+            android:id="@+id/databasebutton2"
+        	android:layout_centerHorizontal="true"
+            android:layout_marginTop="230dp"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:textStyle="bold"
+            android:textSize="17dp"
+            />
+        
+        <Button android:text="  Server Database  "
+        	android:textColor="#33B5E5"
+            android:id="@+id/databasebutton3"
+        	android:layout_centerHorizontal="true"
+            android:layout_marginTop="300dp"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:textStyle="bold"
+            android:textSize="17dp"
+            />
+      
+    <TextView
+        android:id="@+id/imageDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        />
+     
+    <ImageView
+        android:id="@+id/showImg"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/imageDetails"
+        />
+    
+    <TextView
+        android:id="@+id/info"
+        android:layout_below="@+id/showImg"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="70dp"
+        
+        />
+    <Button android:text=" Map "
+         android:textColor="#33B5E5"
+         android:id="@+id/mapButton"
+         android:layout_below="@+id/showImg"
+         android:layout_marginLeft="250dp"
+         android:visibility="invisible"
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content" 
+         android:textSize="14dp" 
+         android:textStyle="italic"
+            />
+  
+  <TextView
+        android:id="@+id/templeName"
+        android:layout_below="@+id/info"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+         android:text="@string/templeName"
+        
+        /> 
+        
+      <EditText         
+        android:id="@+id/enterTempleName"
+         android:layout_below="@+id/templeName"  
+	    android:layout_height="wrap_content" 
+	    android:layout_width="250dp" 
+        android:hint="Enter name"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:textStyle="italic"
+        />
+
+      
+        <TextView
+        android:id="@+id/type"
+        android:layout_below="@+id/enterTempleName"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/type"
+        android:visibility="invisible"
+        />
+        
+        <EditText         
+        android:id="@+id/enterType"
+         android:layout_below="@+id/type"  
+	    android:layout_height="wrap_content" 
+	    android:layout_width="250dp" 
+        android:hint="Enter temple type"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:textStyle="italic"
+        />
+        
+        
+        <TextView
+        android:id="@+id/mainDeity"
+        android:layout_below="@+id/enterType"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/mainDeity"
+        android:visibility="invisible"
+        />
+        
+        <EditText         
+        android:id="@+id/enterDeity"
+         android:layout_below="@+id/mainDeity"  
+	    android:layout_height="wrap_content" 
+	    android:layout_width="250dp" 
+        android:hint="Enter main deities"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:textStyle="italic"
+        
+        android:inputType="textMultiLine" 
+        android:lines="2" 
+        android:minLines="2" 
+        android:gravity="top|left" 
+	    android:maxLines="3" 
+        />
+        
+        <TextView
+        android:id="@+id/dialect"
+        android:layout_below="@+id/enterDeity"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/dialect"
+        android:visibility="invisible"
+        />
+        
+        <EditText         
+        android:id="@+id/enterDialect"
+         android:layout_below="@+id/dialect"  
+	    android:layout_height="wrap_content" 
+	    android:layout_width="250dp" 
+        android:hint="Enter dialect"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:textStyle="italic"
+        />
+        
+   <TextView
+        android:id="@+id/builderSurname"
+        android:layout_below="@+id/enterDialect"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/builderSurname"
+        android:visibility="invisible"
+        />
+        
+        <EditText         
+        android:id="@+id/enterSurname"
+         android:layout_below="@+id/builderSurname"  
+	    android:layout_height="wrap_content" 
+	    android:layout_width="250dp" 
+        android:hint="Enter builder's surname"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:textStyle="italic"
+        />
+        
+     
+        <TextView
+        android:id="@+id/worships"
+        android:layout_below="@+id/enterSurname"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/worships"
+        android:visibility="invisible"
+        />
+        
+        <EditText         
+        android:id="@+id/templeInfo"
+        android:layout_below="@+id/worships"
+        android:inputType="textMultiLine" 
+        android:lines="4" 
+        android:minLines="4" 
+        android:gravity="top|left" 
+	    android:maxLines="5" 
+	    android:layout_height="wrap_content" 
+	    android:layout_width="335dp" 
+        android:hint="Enter worship details (Date and the worship deity etc.)"
+        android:textSize="14dp"
+        android:visibility="invisible"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="italic"/>
+        
+         <TextView
+        android:id="@+id/contact"
+        android:layout_below="@+id/templeInfo"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/contact"
+        android:visibility="invisible"
+        />
+        
+        <EditText         
+        android:id="@+id/enterContact"
+        android:layout_below="@+id/contact"  
+	    android:layout_height="wrap_content" 
+        android:hint="Enter contact"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:textStyle="italic"
+        android:layout_width="332dp" 
+        />
+        
+        <TextView
+        android:id="@+id/others"
+        android:layout_below="@+id/enterContact"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/others"
+        android:visibility="invisible"
+        />
+        <EditText         
+        android:id="@+id/enterOthers"
+        android:layout_below="@+id/others"  
+	    android:layout_height="wrap_content" 
+	    android:layout_width="332dp" 
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:textStyle="italic"
+        android:hint="Additional information"
+        android:inputType="textMultiLine" 
+        android:lines="2" 
+        android:minLines="2" 
+        android:gravity="top|left" 
+	    android:maxLines="3" 
+        />
+   <!--
+    <EditText         
+        android:id="@+id/description"
+        android:layout_below="@+id/nameOne"
+	    android:inputType="textMultiLine" 
+	    android:lines="3" 
+	    android:minLines="1" 
+	    android:gravity="top|left" 
+	    android:maxLines="4" 
+	    android:layout_height="wrap_content" 
+	    android:layout_width="fill_parent" 
+        android:hint="Enter description"
+        android:textSize="14dp"
+        android:visibility="invisible"
+        android:layout_marginTop="2dp"/>
+    ...--> 
+ 
+ <Button android:id="@+id/sendPhoto"
+     	 android:text=" Save "
+	     android:layout_below="@+id/enterOthers"
+		 android:textColor="#33B5E5"
+	     android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+	     android:layout_width="wrap_content" 
+	     android:layout_height="wrap_content" 
+	     android:textSize="14dp"
+	     android:textStyle="bold"/>
+
+ 
+  <Button android:text=" Capture "
+	     android:id="@+id/recapture"
+	     android:layout_below="@+id/sendPhoto"
+	     android:textColor="#33B5E5"
+	     android:layout_marginLeft="10dp"
+         android:visibility="invisible"
+	     android:layout_width="wrap_content" 
+	     android:layout_height="wrap_content" 
+	     android:layout_weight="1"
+	     android:textSize="15dp"
+	     android:textStyle="italic"/>
+  
+     <Button android:text=" View "
+	     android:id="@+id/viewPic"
+	     android:layout_below="@+id/sendPhoto"
+	     android:textColor="#33B5E5"
+	     android:layout_marginLeft="100dp"
+         android:visibility="invisible"
+	     android:layout_width="wrap_content" 
+	     android:layout_height="wrap_content" 
+	     android:layout_weight="1"
+	     android:textSize="15dp"
+	     android:textStyle="italic"/>
+     
+    <Button android:text="Database"
+            android:textColor="#FF9C12"
+            android:id="@+id/databaseButton"
+            android:layout_below="@+id/sendPhoto"
+            android:layout_marginLeft="260dp"
+         	android:visibility="invisible"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:textSize="14dp" 
+            android:textStyle="bold"
+            />
+
+	</RelativeLayout>
+
+</ScrollView>
